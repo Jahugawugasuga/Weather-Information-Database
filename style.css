@@ -1,0 +1,38 @@
+.list-container {
+    columns: "col-md-3";
+    padding: 5px;
+    border: 3px;
+    border-color: black;
+}
+/* .side-row{
+    
+} */
+.side-column{
+    columns:"col-md-3";
+    border: 3px;
+    border-color: black;
+}
+.header {
+    columns: "col-xl-12";
+    columns:"col-xs-12";
+    background-color: royalblue;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.main-column {
+    columns:"col-md-9";
+    border: black 3px;
+
+}
+
+.currentSearch {
+    border: grey 1px; 
+
+}
+.fiveDayForecast {
+background-color: blue;
+
+}
+
+/* cant get the stylings to show up on the divs, need to troubleshoot
