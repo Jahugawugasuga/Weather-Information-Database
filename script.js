@@ -12,7 +12,7 @@ $("#submitBtn").on("click", function(event){
 
 function getWeather(city) {
     
-    var currentURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid="+ apiKey; 
+    var currentURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid="+ apiKey; 
     
 $("#currentSearch").empty();
 
@@ -23,7 +23,7 @@ $.ajax({
 }).then(function(response) { 
     var cityName = $("<h3>").text(response.name);
     var weatherImg = response.weather[0].icon;
-    var weatherEl = $("<img>").attr("src", "http://openweathermap.org/img/wn/"+weatherImg+".png");
+    var weatherEl = $("<img>").attr("src", "https://openweathermap.org/img/wn/"+weatherImg+".png");
     var cityTempDec = (((response.main.temp)-273.15)*9/5+32).toFixed(0);
     var cityTemp = $("<p>").text("Temperature: "+cityTempDec+"°F");
     var cityHumid= $("<p>").text("Humidity: " +response.main.humidity+"%");
@@ -39,7 +39,7 @@ $.ajax({
 
     
       $.ajax({
-        url:"http://api.openweathermap.org/data/2.5/uvi/forecast?appid="+apiKey+"&lat="+ response.coord.lat +"&lon="+ response.coord.lon,
+        url:"https://api.openweathermap.org/data/2.5/uvi/forecast?appid="+apiKey+"&lat="+ response.coord.lat +"&lon="+ response.coord.lon,
         method : "GET"
     }).then(function(response) {
        var uvNum = $("<p>").addClass("card-text").prepend("UV Index: "+response[0].value);
@@ -71,7 +71,7 @@ $(".fiveDay").empty();
         
             var day = $("<p>").addClass("card-title").text(new Date(response.list[dataIndex[i]].dt_txt).toLocaleDateString());
         var weatherImg = (response.list[dataIndex[i]].weather[0].icon);
-        var weatherEl = $("<img>").attr("src", "http://openweathermap.org/img/wn/"+weatherImg+".png")
+        var weatherEl = $("<img>").attr("src", "https://openweathermap.org/img/wn/"+weatherImg+".png")
         var dailyTempDec = (((response.list[dataIndex[i]].main.temp)-273.15)*9/5+32).toFixed(0);
         var dailyTemp = $("<p>").addClass("card-text").text("Temp: "+dailyTempDec+"°F" );
         var dailyHumid = $("<p>").addClass("card-text").text("Humidity: " +response.list[dataIndex[i]].main.humidity+"%");
