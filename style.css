@@ -1,38 +1,55 @@
-.list-container {
-    columns: "col-md-3";
+.list-container li {/* used this one */
+    columns: "col-md-3 col-lg-3";
     padding: 5px;
+    list-style: none;
+    border: grey 1px solid; 
+}
+
+.side-column{ /* used this one */
+    columns:"col-md-3 col-lg-3";
     border: 3px;
     border-color: black;
-}
-/* .side-row{
+    float: left;
     
-} */
-.side-column{
-    columns:"col-md-3";
-    border: 3px;
-    border-color: black;
 }
-.header {
-    columns: "col-xl-12";
-    columns:"col-xs-12";
-    background-color: royalblue;
+.header { /* used this one */
+    
+    background-color: rgb(49, 150, 209);
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
 .main-column {
-    columns:"col-md-9";
+    columns:"col-md-9 col-lg-9 col-sm-9";
     border: black 3px;
-
+    float: right;
 }
 
-.currentSearch {
-    border: grey 1px; 
+#currentSearch {
+    border: grey 1px solid;
+    padding: 5px;
 
 }
 .fiveDayForecast {
-background-color: blue;
+background-color: rgb(49, 150, 209);
+color:#eee;
+margin: 10px;
+}
+
+.badUV {
+    color: red;
+}
+
+.medUV {
+    color:orange;
+}
+
+.goodUV {
+    color: green;
+}
+
+.container {
+    padding: 0 !important;
 
 }
 
-/* cant get the stylings to show up on the divs, need to troubleshoot

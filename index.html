@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel= "stylesheet" href= "style.css"></link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </link>
+
 </head>
+
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <div>
-        <h1 class= "header">Eric's Personal Weather Station</h1>
-    </div>
     
-    
-        <div class= "list-container">
-            <div class = "side-row">
-                <div class = "side-column">
-                    <h3>Search for a City:</h3>
-                    <form id = "userSearch">
-                        <label for="City Search">
-                            <input id="userInput">
-                        </input>
-                           <button class = "submitBtn" placeholder = "City Search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                           </button> 
-                        </label>
-                     </form>
+    <div class="container">
+        <div>
+            <h1 class="header">Eric's Personal Weather Station</h1>
+        </div>
+          <div class="side-column">
+                <h3>Search for a City:</h3>
+                <form id="userSearch">
+                    <label for="City Search">
+                        <input id="userInput" placeholder="City Search">
+                        <button id="submitBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-search">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                        </button>
+                    </label>
+                </form>
+                <div class="list-container history">
                 </div>
             </div>
-        </div>
-
-<div>
-    <div class= "mainBody">
-
-        <div class = "currentSearch"></div>
-        <div class = "fiveDayForecast">
-            <div class = "upper-row"></div>
-            <div class = "lower-row">
-                <div class = "lower-columns">
+            <div class="main-column col-lg-9">
+                <div id="currentSearch"></div>
+                <h3>5-Day Forecast:</h3>
+                <div class="fiveDay row "></div>
             </div>
         </div>
     </div>
-</div>
-    
-    <script src= "script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
