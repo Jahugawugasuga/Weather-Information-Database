@@ -1,4 +1,4 @@
-var apiKey = "b00dff5ac139a6450487fd6a98bd0505"
+var apiKey = prompt("What is your Weather Dashboard API key?");
 var locations = JSON.parse(localStorage.getItem("city"))||[];
 var currentDate = moment().format("MM/DD/YYYY");
 

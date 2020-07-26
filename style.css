@@ -1,18 +1,18 @@
-.list-container li {/* used this one */
+.list-container li {
     columns: "col-md-3 col-lg-3";
     padding: 5px;
     list-style: none;
     border: grey 1px solid; 
 }
 
-.side-column{ /* used this one */
+.side-column{
     columns:"col-md-3 col-lg-3";
     border: 3px;
     border-color: black;
     float: left;
     
 }
-.header { /* used this one */
+.header { 
     
     background-color: rgb(49, 150, 209);
     text-align: center;
